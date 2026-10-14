@@ -25,33 +25,33 @@ export function HeroSection({ onExplore, onOrderClick }: HeroSectionProps = {}) 
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Eyebrow Pill */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A3A2A]/8 text-[#C88A3E] border border-[#C88A3E]/30 text-[11px] font-bold uppercase tracking-[0.25em] mb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A3A2A]/8 text-[#C88A3E] border border-[#C88A3E]/30 text-[11px] font-bold uppercase tracking-[0.25em] mb-6 animate__animated animate__fadeInDown">
           <Sparkles className="w-3.5 h-3.5 text-[#C88A3E]" />
           <span>Artisanal Bakery & Pantry · Lagos</span>
         </div>
 
         {/* Editorial Headline */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-[#2A1B14] tracking-tight leading-[1.08] mb-6">
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-[#2A1B14] tracking-tight leading-[1.08] mb-6 animate__animated animate__fadeInUp">
           Baked With <br />
           <span className="text-[#9E1B32] italic font-normal">Obsession.</span>
         </h1>
 
         {/* Italic Culinary Subtitle */}
-        <p className="font-serif italic text-xl sm:text-2xl text-[#1A3A2A] max-w-2xl mx-auto mb-6">
+        <p className="font-serif italic text-xl sm:text-2xl text-[#1A3A2A] max-w-2xl mx-auto mb-6 animate__animated animate__fadeInUp">
           Handcrafted Luxury Cakes, Low-Carb Keto Bakes & Circular Upcycled Staples.
         </p>
 
         {/* Descriptive Body */}
-        <p className="text-sm sm:text-base font-light text-[#63534B] max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-sm sm:text-base font-light text-[#63534B] max-w-2xl mx-auto leading-relaxed mb-10 animate__animated animate__fadeInUp">
           Slow-baked to an impossible moistness in Lagos. We take zero shortcuts — blending rich dark cocoa, ripe bananas, grain-free keto fibres, and circular coconut pulp with zero preservatives.
         </p>
 
         {/* Fast Action CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate__animated animate__fadeInUp">
           <a
             href="#collections"
             onClick={onExplore}
-            className="w-full sm:w-auto px-8 py-4 bg-[#9E1B32] hover:bg-[#7F1426] active:scale-[0.97] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3 group cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 bg-[#9E1B32] hover:bg-[#7F1426] active:scale-[0.97] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3 group cursor-pointer hover:animate__animated hover:animate__pulse"
           >
             <span>Explore The Collections</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -68,7 +68,7 @@ export function HeroSection({ onExplore, onOrderClick }: HeroSectionProps = {}) 
         </div>
 
         {/* Trust Badges Strip */}
-        <div className="pt-10 border-t border-[#EDE0D4] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 text-center">
+        <div className="pt-10 border-t border-[#EDE0D4] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-4 text-center animate__animated animate__fadeIn">
           <div className="flex flex-col items-center">
             <div className="w-10 h-10 rounded-full bg-[#1A3A2A]/8 flex items-center justify-center text-[#1A3A2A] mb-2">
               <ShieldCheck className="w-5 h-5 text-[#C88A3E]" />

@@ -105,7 +105,7 @@ export function OrderTrayDrawer({
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {items.length === 0 ? (
             <div className="py-20 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#1A3A2A]/5 text-[#C88A3E] mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-[#1A3A2A]/5 text-[#C88A3E] mx-auto flex items-center justify-center animate__animated animate__pulse animate__infinite animate__slower">
                 <ShoppingBag className="w-8 h-8 opacity-60" />
               </div>
               <h3 className="font-serif text-xl font-bold text-[#2A1B14]">
@@ -330,7 +330,7 @@ export function OrderTrayDrawer({
               href={whatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 px-6 bg-[#9E1B32] hover:bg-[#7F1426] text-white rounded-full font-bold text-xs uppercase tracking-[0.18em] shadow-md transition-all flex items-center justify-center gap-2.5 hover:scale-[1.01] active:scale-[0.99] text-center"
+              className="w-full py-4 px-6 bg-[#9E1B32] hover:bg-[#7F1426] text-white rounded-full font-bold text-xs uppercase tracking-[0.18em] shadow-md transition-all flex items-center justify-center gap-2.5 hover:scale-[1.01] active:scale-[0.99] text-center hover:animate__animated hover:animate__pulse"
             >
               <MessageCircle className="w-4 h-4 text-[#E5B370]" />
               <span>Send Order to WhatsApp</span>

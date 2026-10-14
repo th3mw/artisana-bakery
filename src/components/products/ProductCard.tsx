@@ -36,7 +36,7 @@ export function ProductCard({ product, onQuickView }: ProductCardProps) {
   };
 
   return (
-    <article className="group bg-white rounded-2xl overflow-hidden border border-[#EDE0D4] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col hover:-translate-y-1">
+    <article className="group bg-white rounded-2xl overflow-hidden border border-[#EDE0D4] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2 animate__animated animate__fadeInUp">
       {/* Visual Header / Banner */}
       <div className={`relative aspect-[4/3] w-full bg-gradient-to-br ${getGradientByCollection()} overflow-hidden flex items-center justify-center p-6 text-center select-none`}>
         {/* Subtle patterned overlay */}
@@ -45,7 +45,7 @@ export function ProductCard({ product, onQuickView }: ProductCardProps) {
         {/* Collection & Bestseller Badges */}
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10 pointer-events-none">
           {product.badge && (
-            <span className="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-[#C88A3E] text-white shadow-sm flex items-center gap-1">
+            <span className="px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-[#C88A3E] text-white shadow-sm flex items-center gap-1 animate__animated animate__pulse animate__infinite animate__slower">
               <Sparkles className="w-3 h-3" />
               {product.badge}
             </span>

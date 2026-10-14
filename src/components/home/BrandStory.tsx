@@ -35,7 +35,7 @@ export function BrandStory() {
 
             {/* 3 Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-[#EDE0D4]">
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start p-3 rounded-xl hover:bg-white/60 transition-all duration-300">
                 <div className="w-9 h-9 rounded-full bg-[#9E1B32]/10 flex items-center justify-center text-[#9E1B32] mb-2.5">
                   <Flame className="w-4 h-4" />
                 </div>
@@ -47,7 +47,7 @@ export function BrandStory() {
                 </p>
               </div>
 
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start p-3 rounded-xl hover:bg-white/60 transition-all duration-300">
                 <div className="w-9 h-9 rounded-full bg-[#1A3A2A]/10 flex items-center justify-center text-[#1A3A2A] mb-2.5">
                   <Clock className="w-4 h-4" />
                 </div>
@@ -59,7 +59,7 @@ export function BrandStory() {
                 </p>
               </div>
 
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start p-3 rounded-xl hover:bg-white/60 transition-all duration-300">
                 <div className="w-9 h-9 rounded-full bg-[#C88A3E]/10 flex items-center justify-center text-[#C88A3E] mb-2.5">
                   <Heart className="w-4 h-4" />
                 </div>

@@ -18,7 +18,7 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps = {}) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Narrative Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C88A3E]/15 border border-[#C88A3E]/40 text-[#E5B370] text-[11px] font-bold tracking-[0.25em] uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C88A3E]/15 border border-[#C88A3E]/40 text-[#E5B370] text-[11px] font-bold tracking-[0.25em] uppercase animate__animated animate__fadeIn">
               <Recycle className="w-3.5 h-3.5 text-[#E5B370]" />
               <span>Closed-Loop Sustainability</span>
             </div>
@@ -40,7 +40,7 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps = {}) {
 
             {/* Pillar Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#2D5842]">
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#E5B370]/50 transition-all duration-300 hover:scale-[1.03] cursor-default">
                 <span className="block font-serif text-2xl font-bold text-[#E5B370] mb-1">
                   100%
                 </span>
@@ -52,7 +52,7 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps = {}) {
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#E5B370]/50 transition-all duration-300 hover:scale-[1.03] cursor-default">
                 <span className="block font-serif text-2xl font-bold text-[#E5B370] mb-1">
                   0%
                 </span>
@@ -64,7 +64,7 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps = {}) {
                 </span>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#E5B370]/50 transition-all duration-300 hover:scale-[1.03] cursor-default">
                 <span className="block font-serif text-2xl font-bold text-[#E5B370] mb-1">
                   Zero
                 </span>
@@ -81,7 +81,7 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps = {}) {
               <a
                 href="#collections"
                 onClick={onExplorePantry}
-                className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#C88A3E] hover:bg-[#9A6624] active:scale-[0.97] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md transition-all cursor-pointer group"
+                className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#C88A3E] hover:bg-[#9A6624] active:scale-[0.97] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md transition-all cursor-pointer group hover:animate__animated hover:animate__pulse"
               >
                 <span>Shop The Coconut Pantry</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

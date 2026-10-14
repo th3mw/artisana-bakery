@@ -9,6 +9,7 @@ import { FAQSection } from '@/components/home/FAQSection';
 import { CollectionsCatalog } from '@/components/products/CollectionsCatalog';
 import { OrderTrayDrawer } from '@/components/tray/OrderTrayDrawer';
 import { MobileBottomBar } from '@/components/tray/MobileBottomBar';
+import { FloatingWhatsAppButton } from '@/components/layout/FloatingWhatsAppButton';
 
 // Structured Data (JSON-LD) for SEO and Bakery Local Business
 const jsonLd = {
@@ -76,6 +77,9 @@ export default function ArtisanaBakeryPage() {
 
       {/* Mobile Floating Bottom Bar (Client Island) */}
       <MobileBottomBar />
+
+      {/* Direct WhatsApp Concierge Button */}
+      <FloatingWhatsAppButton />
     </div>
   );
 }

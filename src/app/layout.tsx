@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, Montserrat } from 'next/font/google';
 import { TrayProvider } from '@/context/TrayContext';
+import 'animate.css';
 import './globals.css';
 
 const playfair = Playfair_Display({

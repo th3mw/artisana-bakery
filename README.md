@@ -50,13 +50,24 @@ The visual identity embodies **Warm Artisanal Luxury**:
 
 The application does not require database account creation or payment gateway fees. Checkout flows directly to the dedicated Lagos Dispatch Center:
 
-- **Fulfillment Hotline:** `+234 814 339 2377`
+- **Fulfillment Hotline:** `+234 814 339 2377` (`0814 339 2377`)
+- **Floating WhatsApp Concierge:** Fixed live chat button with pulse indicators and pre-filled inquiry redirect.
 - **Delivery Zones:** Lagos Island (Lekki / Ikoyi / VI), Lagos Mainland (Ikeja / Surulere / Yaba / Magodo), Greater Lagos.
 - **Structured Payload:** Automatically formats items, quantities, subtotal, delivery zone, customer details, and custom delivery notes with full URL encoding.
 
 ---
 
-## 5. Development & Verification
+## 5. Motion & Micro-Interactions (animate.css)
+
+Interactive motion and attention-seekers are powered by `animate.css` without JavaScript layout thrashing:
+- **Hero & Headlines:** Smooth entrance animations (`animate__fadeInDown`, `animate__fadeInUp`).
+- **Product Badges:** Infinite slow pulse attention seekers (`animate__pulse animate__infinite animate__slower`).
+- **Floating WhatsApp Concierge:** Entrance bounce (`animate__bounceIn`) with live pulsing ping beacon.
+- **Quick View Modal & Drawer:** Quick zoom (`animate__zoomIn animate__faster`) and subtle interactive feedback.
+
+---
+
+## 6. Development & Verification
 
 All operations use the **Bun** runtime:
 
@@ -87,7 +98,7 @@ bun run build
 
 ---
 
-## 6. Architecture & Lighthouse Defenses
+## 7. Architecture & Lighthouse Defenses
 
 - **Static Generation (SSG):** Pre-rendered static pages with 19.9 kB HTML payload and zero server-side cold start latency.
 - **Hydration Safety:** `TrayContext` hydration guard prevents SSR hydration mismatches by deferring `localStorage` sync until client mount.
