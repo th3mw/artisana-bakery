@@ -15,10 +15,10 @@ export function AnnouncementBar() {
         <span>Delivered Chilled Across Lagos</span>
         <span className="text-[#C88A3E] opacity-75 hidden md:inline">·</span>
         <a
-          href="tel:07010731559"
+          href="tel:08143392377"
           className="text-[#E5B370] hover:text-white underline underline-offset-2 transition-colors hidden md:inline"
         >
-          Call 07010731559
+          Call 0814 339 2377
         </a>
       </div>
     </div>

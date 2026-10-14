@@ -115,7 +115,7 @@ export function HeaderNav({ onOpenTray }: HeaderNavProps) {
             Frequently Asked Questions
           </a>
           <div className="pt-4 border-t border-[#EDE0D4] text-xs text-[#7E6D64]">
-            Order Line: <a href="tel:07010731559" className="font-semibold text-[#9E1B32]">07010731559</a>
+            Order Line: <a href="tel:08143392377" className="font-semibold text-[#9E1B32]">0814 339 2377</a>
           </div>
         </div>
       )}

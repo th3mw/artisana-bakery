@@ -43,7 +43,7 @@ export default function ArtisanaBakeryPage() {
     name: 'Artisana Bakery by Mohfood',
     image: 'https://bakery.mohfood.com/og-image.jpg',
     description: 'Handcrafted luxury bakes in Lagos. Decadent chocolate cake, moist banana bread, keto line, and circular upcycled coconut pantry staples.',
-    telephone: '+2347010731559',
+    telephone: '+2348143392377',
     url: 'https://bakery.mohfood.com',
     priceRange: '₦₦',
     address: {

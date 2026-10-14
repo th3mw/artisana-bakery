@@ -13,7 +13,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'How does ordering and delivery work across Lagos?',
     answer:
-      'We bake fresh daily! You can browse our 3 collections, add items to your Order Tray, and tap "Send Order to WhatsApp". Your order details are sent directly to our Lagos fulfillment team (+234 701 073 1559), who confirm delivery slot and dispatch chilled riders across both Lagos Island and Mainland.',
+      'We bake fresh daily! You can browse our 3 collections, add items to your Order Tray, and tap "Send Order to WhatsApp". Your order details are sent directly to our Lagos fulfillment team (+234 814 339 2377), who confirm delivery slot and dispatch chilled riders across both Lagos Island and Mainland.',
   },
   {
     question: 'How long do the cakes and banana bread stay fresh?',
@@ -33,7 +33,7 @@ const FAQS: FAQItem[] = [
   {
     question: 'Can I order for parties, events, or corporate gifting in Lagos?',
     answer:
-      'Yes! We cater whole cakes, artisan loaf gift hampers, and pantry bundles for events and corporate gifts. Reach out via WhatsApp or call us on 07010731559 at least 48 hours before your event.',
+      'Yes! We cater whole cakes, artisan loaf gift hampers, and pantry bundles for events and corporate gifts. Reach out via WhatsApp or call us on 0814 339 2377 at least 48 hours before your event.',
   },
 ];
 

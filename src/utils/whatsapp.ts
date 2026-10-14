@@ -1,6 +1,6 @@
 import { TrayItem, OrderCustomerDetails } from '@/types/tray';
 
-export const ARTISANA_WHATSAPP_PHONE = '2347010731559';
+export const ARTISANA_WHATSAPP_PHONE = '2348143392377';
 
 export function formatNaira(amount: number): string {
   return '₦' + amount.toLocaleString('en-NG');

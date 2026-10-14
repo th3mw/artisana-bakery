@@ -80,11 +80,11 @@ export function Footer() {
             </h4>
             <div className="space-y-2.5 text-xs text-[#D0C2B6]">
               <a
-                href="tel:07010731559"
+                href="tel:08143392377"
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#C88A3E]" />
-                <span>07010731559</span>
+                <span>0814 339 2377</span>
               </a>
               <a
                 href={`https://wa.me/${ARTISANA_WHATSAPP_PHONE}`}

@@ -323,7 +323,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
             </a>
 
             <p className="text-[10px] text-center text-[#7E6D64]">
-              Connected directly to Lagos fulfillment: +234 701 073 1559
+              Connected directly to Lagos fulfillment: +234 814 339 2377
             </p>
           </div>
         )}

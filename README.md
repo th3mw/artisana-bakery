@@ -6,7 +6,7 @@
 [![Framework](https://img.shields.io/badge/Framework-Next.js%2015%20App%20Router-black?logo=next.js)](https://nextjs.org)
 [![Styling](https://img.shields.io/badge/CSS-Tailwind%20CSS%20v4-38BDF8?logo=tailwindcss)](https://tailwindcss.com)
 [![Testing](https://img.shields.io/badge/Tests-Vitest%20%2B%20RTL-6E9F18?logo=vitest)](https://vitest.dev)
-[![Fulfillment](https://img.shields.io/badge/Dispatch-WhatsApp%20Lagos-25D366?logo=whatsapp&logoColor=white)](https://wa.me/2347010731559)
+[![Fulfillment](https://img.shields.io/badge/Dispatch-WhatsApp%20Lagos-25D366?logo=whatsapp&logoColor=white)](https://wa.me/2348143392377)
 
 ---
 
@@ -50,7 +50,7 @@ The visual identity embodies **Warm Artisanal Luxury**:
 
 The application does not require database account creation or payment gateway fees. Checkout flows directly to the dedicated Lagos Dispatch Center:
 
-- **Fulfillment Hotline:** `+234 701 073 1559`
+- **Fulfillment Hotline:** `+234 814 339 2377`
 - **Delivery Zones:** Lagos Island (Lekki / Ikoyi / VI), Lagos Mainland (Ikeja / Surulere / Yaba / Magodo), Greater Lagos.
 - **Structured Payload:** Automatically formats items, quantities, subtotal, delivery zone, customer details, and custom delivery notes with full URL encoding.
 

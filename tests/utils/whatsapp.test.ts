@@ -42,9 +42,9 @@ describe('WhatsApp Formatter', () => {
     expect(text).toContain('14 Admiralty Way, Lekki Phase 1');
   });
 
-  it('generates wa.me URL targeting +234 701 073 1559', () => {
+  it('generates wa.me URL targeting +234 814 339 2377', () => {
     const url = generateWhatsAppUrl(dummyItems, dummyDetails);
-    expect(url).toContain('https://wa.me/2347010731559?text=');
+    expect(url).toContain('https://wa.me/2348143392377?text=');
     expect(url).toContain(encodeURIComponent('Chidi Okafor'));
   });
 });
