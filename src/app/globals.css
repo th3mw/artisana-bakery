@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: var(--font-playfair), "Cormorant Garamond", Georgia, serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-cormorant: var(--font-cormorant), Georgia, serif;
+  --ease-out-fluid: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 :root {
@@ -22,6 +23,15 @@
   --forest-light: #2D5842;
   --text-muted: #7E6D64;
   --border-subtle: #EDE0D4;
+}
+
+/* Hide scrollbars while preserving touch and trackpad scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 html {

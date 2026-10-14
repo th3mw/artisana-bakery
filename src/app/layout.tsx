@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Playfair_Display, Cormorant_Garamond, Montserrat } from 'next/font/google';
+import { Playfair_Display, Montserrat } from 'next/font/google';
 import { TrayProvider } from '@/context/TrayContext';
 import './globals.css';
 
@@ -9,17 +9,9 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant',
-  display: 'swap',
-});
-
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
   variable: '--font-montserrat',
   display: 'swap',
 });
@@ -52,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${cormorant.variable} ${montserrat.variable}`}
+      className={`${playfair.variable} ${montserrat.variable}`}
     >
       <body className="font-sans antialiased selection:bg-[#9E1B32] selection:text-white">
         <TrayProvider>{children}</TrayProvider>

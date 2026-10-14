@@ -127,3 +127,7 @@ export function useTray() {
   }
   return context;
 }
+
+export function useOptionalTray() {
+  return useContext(TrayContext);
+}

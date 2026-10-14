@@ -71,23 +71,29 @@ export function FAQSection() {
                   type="button"
                   onClick={() => toggle(idx)}
                   aria-expanded={isOpen}
-                  className="w-full text-left px-6 py-4.5 flex items-center justify-between gap-4 cursor-pointer"
+                  className="w-full text-left px-6 py-4.5 flex items-center justify-between gap-4 cursor-pointer select-none active:bg-black/[0.02] transition-colors"
                 >
                   <span className="font-serif text-base sm:text-lg font-bold text-[#2A1B14] leading-snug">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#C88A3E] transition-transform duration-200 shrink-0 ${
+                    className={`w-5 h-5 text-[#C88A3E] transition-transform duration-250 ease-out shrink-0 ${
                       isOpen ? 'rotate-180 text-[#9E1B32]' : ''
                     }`}
                   />
                 </button>
 
-                {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#63534B] font-light leading-relaxed border-t border-[#F7EFE6] animate-in fade-in duration-200">
-                    {faq.answer}
+                <div
+                  className={`grid transition-[grid-template-rows] duration-250 ease-out ${
+                    isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#63534B] font-light leading-relaxed border-t border-[#F7EFE6]">
+                      {faq.answer}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

@@ -6,18 +6,19 @@ import { useTray } from '@/context/TrayContext';
 import { formatNaira } from '@/utils/whatsapp';
 
 interface MobileBottomBarProps {
-  onOpenTray: () => void;
+  onOpenTray?: () => void;
 }
 
-export function MobileBottomBar({ onOpenTray }: MobileBottomBarProps) {
-  const { itemCount, subtotal } = useTray();
+export function MobileBottomBar({ onOpenTray }: MobileBottomBarProps = {}) {
+  const { itemCount, subtotal, openTray } = useTray();
+  const handleOpenTray = onOpenTray || openTray;
 
   if (itemCount === 0) return null;
 
   return (
     <aside
       aria-label="Mobile Order Summary"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-white/95 backdrop-blur-md border-t border-[#EDE0D4] shadow-lg animate-in slide-in-from-bottom duration-300"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-white/95 backdrop-blur-md border-t border-[#EDE0D4] shadow-lg animate-in slide-in-from-bottom duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
     >
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <div className="flex items-center gap-2.5">
@@ -41,8 +42,8 @@ export function MobileBottomBar({ onOpenTray }: MobileBottomBarProps) {
 
         <button
           type="button"
-          onClick={onOpenTray}
-          className="px-5 py-2.5 bg-[#9E1B32] hover:bg-[#7F1426] text-white rounded-full font-bold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center gap-2 cursor-pointer"
+          onClick={handleOpenTray}
+          className="px-5 py-2.5 bg-[#9E1B32] hover:bg-[#7F1426] active:scale-[0.96] text-white rounded-full font-bold text-xs uppercase tracking-wider shadow-sm transition-all flex items-center gap-2 cursor-pointer"
         >
           <span>View Tray</span>
           <ArrowRight className="w-3.5 h-3.5" />

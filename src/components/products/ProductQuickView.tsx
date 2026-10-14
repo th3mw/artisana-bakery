@@ -46,7 +46,7 @@ export function ProductQuickView({ product, onClose }: ProductQuickViewProps) {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl bg-[#FDF8F3] rounded-2xl shadow-2xl overflow-hidden border border-[#EDE0D4] max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-2xl bg-[#FDF8F3] rounded-2xl shadow-2xl overflow-hidden border border-[#EDE0D4] max-h-[90vh] flex flex-col animate-in zoom-in-95 fade-in duration-200 ease-out"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}

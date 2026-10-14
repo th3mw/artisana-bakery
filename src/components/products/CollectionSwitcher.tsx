@@ -27,32 +27,36 @@ export function CollectionSwitcher({
 
   return (
     <div className="w-full flex flex-col items-center mb-10">
-      {/* Pills Container */}
-      <div
-        role="tablist"
-        aria-label="Artisana Collections"
-        className="inline-flex p-1.5 rounded-full bg-[#EDE0D4] border border-[#DFCFC1] max-w-full overflow-x-auto"
-      >
-        {COLLECTIONS.map((col) => {
-          const isActive = activeCollection === col.id;
-          return (
-            <button
-              key={col.id}
-              role="tab"
-              aria-selected={isActive}
-              aria-controls={`collection-panel-${col.id}`}
-              onClick={() => onSelectCollection(col.id)}
-              className={`relative px-4 sm:px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer ${
-                isActive
-                  ? 'bg-[#9E1B32] text-white shadow-md'
-                  : 'text-[#2A1B14] hover:text-[#9E1B32] hover:bg-white/40'
-              }`}
-            >
-              <span>{getCollectionIcon(col.id)}</span>
-              <span>{col.name}</span>
-            </button>
-          );
-        })}
+      {/* Pills Container with hidden scrollbars and smooth touch ergonomics */}
+      <div className="w-full max-w-full overflow-hidden flex justify-center px-4">
+        <div
+          role="tablist"
+          aria-label="Artisana Collections"
+          className="inline-flex p-1.5 rounded-full bg-[#EDE0D4] border border-[#DFCFC1] max-w-full overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory shadow-inner touch-pan-x"
+        >
+          {COLLECTIONS.map((col) => {
+            const isActive = activeCollection === col.id;
+            return (
+              <button
+                key={col.id}
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`collection-panel-${col.id}`}
+                onClick={() => onSelectCollection(col.id)}
+                className={`relative px-4 sm:px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-200 ease-out whitespace-nowrap flex items-center gap-2 cursor-pointer snap-center select-none active:scale-[0.96] ${
+                  isActive
+                    ? 'bg-[#9E1B32] text-white shadow-md scale-[1.02]'
+                    : 'text-[#2A1B14] hover:text-[#9E1B32] hover:bg-white/40 active:bg-white/60'
+                }`}
+              >
+                <span className={`transition-transform duration-200 ${isActive ? 'scale-110 text-[#E5B370]' : ''}`}>
+                  {getCollectionIcon(col.id)}
+                </span>
+                <span>{col.name}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Active Collection Description Strip */}
@@ -63,7 +67,7 @@ export function CollectionSwitcher({
             key={col.id}
             id={`collection-panel-${col.id}`}
             role="tabpanel"
-            className="mt-4 text-center max-w-xl px-4 animate-in fade-in duration-300"
+            className="mt-4 text-center max-w-xl px-4 animate-in fade-in zoom-in-95 duration-200 ease-out"
           >
             <p className="font-serif italic text-base sm:text-lg text-[#C88A3E]">
               &ldquo;{col.tagline}&rdquo;

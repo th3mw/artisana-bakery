@@ -2,13 +2,16 @@
 
 import React from 'react';
 import { ArrowRight, ShoppingBag, ShieldCheck, Sparkles, Truck, Leaf, Award } from 'lucide-react';
+import { useOptionalTray } from '@/context/TrayContext';
 
 interface HeroSectionProps {
-  onExplore: () => void;
-  onOrderClick: () => void;
+  onExplore?: () => void;
+  onOrderClick?: () => void;
 }
 
-export function HeroSection({ onExplore, onOrderClick }: HeroSectionProps) {
+export function HeroSection({ onExplore, onOrderClick }: HeroSectionProps = {}) {
+  const tray = useOptionalTray();
+  const handleOrderClick = onOrderClick || (tray ? tray.openTray : () => {});
   return (
     <section className="relative overflow-hidden bg-[#FDF8F3] pt-12 pb-20 md:pt-20 md:pb-28 border-b border-[#EDE0D4]">
       {/* Decorative Warm Radial Background Glow */}
@@ -45,19 +48,19 @@ export function HeroSection({ onExplore, onOrderClick }: HeroSectionProps) {
 
         {/* Fast Action CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <button
-            type="button"
+          <a
+            href="#collections"
             onClick={onExplore}
-            className="w-full sm:w-auto px-8 py-4 bg-[#9E1B32] hover:bg-[#7F1426] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3 group"
+            className="w-full sm:w-auto px-8 py-4 bg-[#9E1B32] hover:bg-[#7F1426] active:scale-[0.97] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-3 group cursor-pointer"
           >
             <span>Explore The Collections</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
 
           <button
             type="button"
-            onClick={onOrderClick}
-            className="w-full sm:w-auto px-8 py-4 bg-transparent hover:bg-[#2A1B14] text-[#2A1B14] hover:text-white border-2 border-[#2A1B14] rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2.5"
+            onClick={handleOrderClick}
+            className="w-full sm:w-auto px-8 py-4 bg-transparent hover:bg-[#2A1B14] active:scale-[0.97] text-[#2A1B14] hover:text-white border-2 border-[#2A1B14] rounded-full font-semibold text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2.5 cursor-pointer"
           >
             <ShoppingBag className="w-4 h-4" />
             <span>Open Order Tray</span>

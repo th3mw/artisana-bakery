@@ -7,12 +7,26 @@ import { formatNaira, generateWhatsAppUrl } from '@/utils/whatsapp';
 import { OrderCustomerDetails } from '@/types/tray';
 
 interface OrderTrayDrawerProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
-export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
-  const { items, itemCount, subtotal, updateQuantity, removeItem, clearTray } = useTray();
+export function OrderTrayDrawer({
+  isOpen: propsIsOpen,
+  onClose: propsOnClose,
+}: OrderTrayDrawerProps = {}) {
+  const {
+    items,
+    itemCount,
+    subtotal,
+    updateQuantity,
+    removeItem,
+    clearTray,
+    isTrayOpen,
+    closeTray,
+  } = useTray();
+  const isOpen = propsIsOpen !== undefined ? propsIsOpen : isTrayOpen;
+  const onClose = propsOnClose || closeTray;
 
   const [details, setDetails] = useState<OrderCustomerDetails>({
     customerName: '',
@@ -50,7 +64,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg bg-[#FDF8F3] h-full shadow-2xl flex flex-col border-l border-[#EDE0D4] overflow-hidden"
+        className="relative w-full max-w-lg bg-[#FDF8F3] h-full shadow-2xl flex flex-col border-l border-[#EDE0D4] overflow-hidden animate-in slide-in-from-right duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Header */}

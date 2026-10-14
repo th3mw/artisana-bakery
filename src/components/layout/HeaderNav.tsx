@@ -5,11 +5,12 @@ import { ShoppingBag, Menu, X, Sparkles } from 'lucide-react';
 import { useTray } from '@/context/TrayContext';
 
 interface HeaderNavProps {
-  onOpenTray: () => void;
+  onOpenTray?: () => void;
 }
 
-export function HeaderNav({ onOpenTray }: HeaderNavProps) {
-  const { itemCount } = useTray();
+export function HeaderNav({ onOpenTray }: HeaderNavProps = {}) {
+  const { itemCount, openTray } = useTray();
+  const handleOpenTray = onOpenTray || openTray;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -58,7 +59,7 @@ export function HeaderNav({ onOpenTray }: HeaderNavProps) {
         <div className="flex items-center gap-3">
           <button
             type="button"
-            onClick={onOpenTray}
+            onClick={handleOpenTray}
             aria-label={`Order Tray with ${itemCount} items`}
             className="relative flex items-center gap-2.5 px-4 sm:px-5 py-2.5 bg-[#9E1B32] hover:bg-[#7F1426] text-white rounded-full font-medium text-xs tracking-wider uppercase shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
           >

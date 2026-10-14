@@ -21,7 +21,10 @@ export function ProductGrid({ products, onQuickView }: ProductGridProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div
+      key={products[0]?.collectionId || 'product-grid'}
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 animate-in fade-in duration-300 ease-out"
+    >
       {products.map((product) => (
         <ProductCard
           key={product.id}

@@ -1,13 +1,11 @@
-'use client';
-
 import React from 'react';
 import { Sparkles, Recycle, ArrowRight, ShieldCheck, HeartHandshake } from 'lucide-react';
 
 interface WasteToWealthProps {
-  onExplorePantry: () => void;
+  onExplorePantry?: () => void;
 }
 
-export function WasteToWealth({ onExplorePantry }: WasteToWealthProps) {
+export function WasteToWealth({ onExplorePantry }: WasteToWealthProps = {}) {
   return (
     <section
       id="sustainability"
@@ -80,14 +78,14 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps) {
             </div>
 
             <div className="pt-2">
-              <button
-                type="button"
+              <a
+                href="#collections"
                 onClick={onExplorePantry}
-                className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#C88A3E] hover:bg-[#9A6624] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md transition-all cursor-pointer group"
+                className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#C88A3E] hover:bg-[#9A6624] active:scale-[0.97] text-white rounded-full font-semibold text-xs uppercase tracking-[0.2em] shadow-md transition-all cursor-pointer group"
               >
                 <span>Shop The Coconut Pantry</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
 
