@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1400">
+<title>Mohfood Signature – Indulgence, Perfected.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #fdf5ee;
+    --blush: #fdf0f0;
+    --crimson: #b81c4b;
+    --gold: #9a7b3c;
+    --dark-gold: #7a5e28;
+    --forest: #1a3a2a;
+    --charcoal: #2c2c2c;
+    --mid: #5a5a5a;
+    --light: #8a8a8a;
+    --white: #ffffff;
+    --border: #e8ddd0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    min-width: 1200px;
+  }
+
+  /* ─── ANNOUNCEMENT BAR ─── */
+  .announcement-bar {
+    background: var(--forest);
+    color: #c8ddd0;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  /* ─── NAVIGATION ─── */
+  nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .nav-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--crimson);
+    text-decoration: none;
+  }
+  .nav-logo span {
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .nav-links {
+    display: flex;
+    gap: 44px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--crimson); }
+  .nav-cta {
+    background: var(--crimson);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 2px;
+    letter-spacing: 1.5px;
+  }
+  .nav-cta:hover { background: #961640; color: white !important; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: var(--cream);
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(184,28,75,0.05) 0%, transparent 65%),
+                radial-gradient(ellipse at 30% 70%, rgba(154,123,60,0.06) 0%, transparent 55%);
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 760px; }
+  .hero-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 82px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--crimson);
+    margin-bottom: 18px;
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--forest);
+    margin-bottom: 28px;
+  }
+  .hero-body {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--mid);
+    max-width: 600px;
+    margin: 0 auto 44px;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; align-items: center; }
+  .btn-primary {
+    background: var(--crimson);
+    color: white;
+    padding: 15px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    border-radius: 2px;
+  }
+  .btn-primary:hover { background: #961640; transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--forest);
+    padding: 15px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--forest);
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 2px;
+  }
+  .btn-outline:hover { background: var(--forest); color: white; }
+  .hero-badges {
+    margin-top: 52px;
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
+  }
+  .hero-badge { text-align: center; }
+  .hero-badge-icon { font-size: 22px; margin-bottom: 6px; }
+  .hero-badge-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  /* ─── SECTION COMMONS ─── */
+  section { padding: 90px 0; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 60px; }
+  .section-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .section-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--mid);
+    margin-bottom: 52px;
+  }
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px 0 50px;
+  }
+  .divider.center { margin: 20px auto 50px; }
+
+  /* ─── PARFAIT SECTION ─── */
+  .parfait-section { background: var(--blush); }
+  .parfait-header { text-align: center; }
+  .parfait-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 52px;
+  }
+  .parfait-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .parfait-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+  .parfait-image-wrap {
+    height: 420px;
+    overflow: hidden;
+    position: relative;
+  }
+  .parfait-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .parfait-card:hover .parfait-image-wrap img { transform: scale(1.04); }
+  .parfait-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: var(--forest);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+  .parfait-body { padding: 36px 40px 40px; flex: 1; display: flex; flex-direction: column; }
+  .parfait-tags {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .parfait-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .parfait-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .parfait-details {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    flex: 1;
+  }
+  .parfait-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .parfait-weight {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--light);
+    text-transform: uppercase;
+  }
+
+  /* ─── BAKERY SECTION ─── */
+  .bakery-section { background: white; }
+  .bakery-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .bakery-intro { position: sticky; top: 100px; }
+  .bakery-intro p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--mid);
+    margin-bottom: 16px;
+  }
+  .bakery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .bakery-card {
+    background: var(--cream);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .bakery-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+  .bakery-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .bakery-img {
+    height: 220px;
+    overflow: hidden;
+  }
+  .bakery-card.featured .bakery-img { height: 100%; }
+  .bakery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .bakery-card:hover .bakery-img img { transform: scale(1.05); }
+  .bakery-info { padding: 22px 24px; }
+  .bakery-card.featured .bakery-info { padding: 36px 32px; display: flex; flex-direction: column; justify-content: center; }
+  .bakery-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .bakery-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .bakery-card.featured .bakery-name { font-size: 26px; margin-bottom: 14px; }
+  .bakery-desc {
+    font-size: 12.5px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--mid);
+  }
+  .bakery-card.featured .bakery-desc { font-size: 14px; }
+  .coming-soon-tag {
+    display: inline-block;
+    margin-top: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ─── PANTRY SECTION ─── */
+  .pantry-section {
+    background: var(--forest);
+    color: white;
+  }
+  .pantry-section .section-eyebrow { color: #c8a96a; }
+  .pantry-section .section-title { color: white; }
+  .pantry-section .section-subtitle { color: rgba(255,255,255,0.65); }
+  .pantry-section .divider { background: #c8a96a; }
+  .pantry-intro {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.75);
+    max-width: 680px;
+    margin-bottom: 52px;
+  }
+  .pantry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .pantry-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .pantry-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.11); }
+  .pantry-img {
+    height: 260px;
+    overflow: hidden;
+  }
+  .pantry-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    opacity: 0.88;
+  }
+  .pantry-card:hover .pantry-img img { transform: scale(1.05); opacity: 1; }
+  .pantry-info { padding: 28px 28px 32px; }
+  .pantry-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c8a96a;
+    margin-bottom: 10px;
+  }
+  .pantry-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+  }
+  .pantry-desc {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 16px;
+  }
+  .pantry-badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pantry-pill {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .pantry-note {
+    margin-top: 48px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255,255,255,0.55);
+    padding-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  /* ─── EVERYDAY RANGE ─── */
+  .everyday-section { background: var(--cream); }
+  .everyday-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .everyday-intro p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--mid);
+    margin-bottom: 16px;
+  }
+  .everyday-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 16px 28px;
+    background: var(--forest);
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-radius: 2px;
+  }
+  .everyday-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .everyday-item {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  .everyday-item:hover { transform: translateY(-3px); }
+  .everyday-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .everyday-item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin: 14px 14px 4px;
+    line-height: 1.3;
+  }
+  .everyday-item-sub {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: var(--light);
+    padding: 0 14px;
+  }
+  .stockist-box {
+    margin-top: 32px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px 32px;
+  }
+  .stockist-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+  }
+  .stockist-box p {
+    font-size: 13.5px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  .stockist-box a { color: var(--crimson); text-decoration: none; font-weight: 600; }
+
+  /* ─── BRAND STORY ─── */
+  .story-section { background: white; }
+  .story-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .story-text p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--mid);
+    margin-bottom: 20px;
+  }
+  .story-image {
+    position: relative;
+    height: 520px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .story-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(26,58,42,0.85));
+    padding: 40px 28px 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+  }
+  .story-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 44px;
+  }
+  .story-value {
+    text-align: center;
+    padding: 28px 20px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .story-value-icon { font-size: 28px; margin-bottom: 10px; }
+  .story-value h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+  .story-value p { font-size: 12px; color: var(--light); line-height: 1.6; margin: 0; }
+
+  /* ─── ORDER CTA ─── */
+  .order-cta {
+    background: var(--crimson);
+    padding: 80px 60px;
+    text-align: center;
+  }
+  .order-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .order-cta p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 38px;
+  }
+  .order-cta .btn-white {
+    background: white;
+    color: var(--crimson);
+    padding: 16px 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: transform 0.2s;
+    display: inline-block;
+  }
+  .order-cta .btn-white:hover { transform: translateY(-2px); }
+  .order-methods {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 32px;
+  }
+  .order-method {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.75);
+    text-transform: uppercase;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--charcoal);
+    color: rgba(255,255,255,0.65);
+    padding: 64px 0 32px;
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 28px;
+  }
+  .footer-brand h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 14px;
+  }
+  .footer-brand h3 span { color: var(--gold); font-weight: 400; }
+  .footer-brand p { font-size: 13px; line-height: 1.8; }
+  .footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: white; }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11.5px;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.45); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  MADE FRESH DAILY &nbsp;·&nbsp; NO PRESERVATIVES &nbsp;·&nbsp; DELIVERED CHILLED ACROSS LAGOS
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">MOHFOOD <span>SIGNATURE</span></a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#bakery">Artisana Bakery</a></li>
+      <li><a href="#pantry">The Pantry</a></li>
+      <li><a href="#everyday">Everyday Range</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#order" class="nav-cta">Order Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-eyebrow">MOHFOOD SIGNATURE</p>
+    <h1 class="hero-title">Indulgence,<br>Perfected.</h1>
+    <p class="hero-subtitle">Premium handcrafted parfaits</p>
+    <p class="hero-body">
+      Layer upon layer of real orchard fruits, creamy Greek yoghurt, crunchy nuts and golden granola.
+      Made fresh daily in Lagos. No preservatives. Ever.
+    </p>
+    <div class="hero-actions">
+      <a href="#shop" class="btn-primary">Shop Signature</a>
+      <a href="#story" class="btn-outline">Our Story</a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge">
+        <div class="hero-badge-icon">🌿</div>
+        <div class="hero-badge-label">No Preservatives</div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon">🍓</div>
+        <div class="hero-badge-label">Real Fruit</div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon">🥛</div>
+        <div class="hero-badge-label">Greek Yoghurt</div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon">🚚</div>
+        <div class="hero-badge-label">Chilled Delivery</div>
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon">✨</div>
+        <div class="hero-badge-label">Made Fresh Daily</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE PARFAIT COLLECTION -->
+<section class="parfait-section" id="shop">
+  <div class="container">
+    <div class="parfait-header">
+      <p class="section-eyebrow">THE SIGNATURE COLLECTION</p>
+      <h2 class="section-title">Our Parfait Masterpieces</h2>
+      <p class="section-subtitle">Two parfaits. Both perfect. One for every mood.</p>
+      <div class="divider center"></div>
+    </div>
+    <div class="parfait-grid">
+
+      <!-- WHITE ORCHARD PARFAIT -->
+      <div class="parfait-card">
+        <div class="parfait-image-wrap">
+          <img src="generated_image_1784296198_0.png" alt="White Orchard Parfait">
+          <span class="parfait-badge">Signature</span>
+        </div>
+        <div class="parfait-body">
+          <p class="parfait-tags">REAL FRUITS &nbsp;·&nbsp; CREAMY VANILLA YOGHURT &nbsp;·&nbsp; CRUNCHY NUTS</p>
+          <h3 class="parfait-name">White Orchard Parfait</h3>
+          <p class="parfait-desc">Our ivory masterpiece.</p>
+          <p class="parfait-details">
+            Creamy vanilla Greek yoghurt layered with apples, coconut, kiwi, strawberries, blueberries, grapes,
+            pomegranate &amp; raisins, crowned with granola, cashews and almonds.
+          </p>
+          <div class="parfait-footer">
+            <span class="parfait-weight">500g</span>
+            <a href="#order" class="btn-primary" style="padding: 11px 28px; font-size: 10.5px;">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STRAWBERRY CRÈME ROYALE -->
+      <div class="parfait-card">
+        <div class="parfait-image-wrap">
+          <img src="generated_image_1784296219_0.png" alt="Strawberry Crème Royale Parfait">
+          <span class="parfait-badge">Signature</span>
+        </div>
+        <div class="parfait-body">
+          <p class="parfait-tags">REAL FRUITS &nbsp;·&nbsp; CREAMY STRAWBERRY YOGHURT &nbsp;·&nbsp; CRUNCHY NUTS</p>
+          <h3 class="parfait-name">Strawberry Crème Royale Parfait</h3>
+          <p class="parfait-desc">Pretty in pink, rich in flavour.</p>
+          <p class="parfait-details">
+            Silky strawberry Greek yoghurt layered with the same orchard of real fruits, finished with
+            crunchy granola, cashews and almonds.
+          </p>
+          <div class="parfait-footer">
+            <span class="parfait-weight">500g</span>
+            <a href="#order" class="btn-primary" style="padding: 11px 28px; font-size: 10.5px;">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ARTISANA BAKERY -->
+<section class="bakery-section" id="bakery">
+  <div class="container">
+    <div class="bakery-layout">
+      <div class="bakery-intro">
+        <p class="section-eyebrow">ARTISANA BAKERY</p>
+        <h2 class="section-title">Baked With<br>Obsession</h2>
+        <div class="divider"></div>
+        <p>Every loaf, every slice — slow-baked to an impossible moistness. No shortcuts, no compromise. Just the finest ingredients and the kind of care you can actually taste.</p>
+        <p>Our bakery range celebrates the classics done exceptionally: deep, dark chocolate; warm spiced banana; velvety red velvet. Each one a proper indulgence.</p>
+        <p style="margin-top: 28px; font-size: 11.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold);">Available for order &amp; pre-order</p>
+        <a href="#order" class="btn-primary" style="display:inline-block; margin-top: 20px;">Pre-Order Now</a>
+      </div>
+      <div class="bakery-grid">
+
+        <!-- FEATURED: Chocolate Cake -->
+        <div class="bakery-card featured">
+          <div class="bakery-img">
+            <img src="generated_image_1784296239_0.png" alt="Decadent Moist Chocolate Cake">
+          </div>
+          <div class="bakery-info">
+            <p class="bakery-tag">SIGNATURE BAKE</p>
+            <h3 class="bakery-name">Decadent Moist Chocolate Cake</h3>
+            <p class="bakery-desc">Impossibly moist, intensely dark. This is the chocolate cake Lagos has been waiting for — rich ganache layers, a crumb that stays tender for days.</p>
+            <span class="coming-soon-tag">Available to Order</span>
+          </div>
+        </div>
+
+        <!-- Moist Banana Bread -->
+        <div class="bakery-card">
+          <div class="bakery-img">
+            <img src="generated_image_1784296264_0.png" alt="Moist Banana Bread">
+          </div>
+          <div class="bakery-info">
+            <p class="bakery-tag">ARTISANA</p>
+            <h3 class="bakery-name">Moist Banana Bread</h3>
+            <p class="bakery-desc">Warm, fragrant and deeply satisfying. Made with perfectly ripe bananas.</p>
+            <span class="coming-soon-tag">Available to Order</span>
+          </div>
+        </div>
+
+        <!-- Red Velvet -->
+        <div class="bakery-card">
+          <div class="bakery-img">
+            <img src="generated_image_1784296282_0.png" alt="Red Velvet Cake">
+          </div>
+          <div class="bakery-info">
+            <p class="bakery-tag">ARTISANA</p>
+            <h3 class="bakery-name">Red Velvet Cake</h3>
+            <p class="bakery-desc">Velvety, crimson, crowned with cream cheese frosting. A true showstopper.</p>
+            <span class="coming-soon-tag">Available to Order</span>
+          </div>
+        </div>
+
+        <!-- Banana Coconut Bread -->
+        <div class="bakery-card">
+          <div class="bakery-img">
+            <img src="generated_image_1784296300_0.png" alt="Banana Coconut Bread">
+          </div>
+          <div class="bakery-info">
+            <p class="bakery-tag">TROPICAL BAKE</p>
+            <h3 class="bakery-name">Banana Coconut Bread</h3>
+            <p class="bakery-desc">Tropical depth meets classic comfort — banana and coconut in perfect harmony.</p>
+            <span class="coming-soon-tag">Available to Order</span>
+          </div>
+        </div>
+
+        <!-- Oreos Chocolate Cake -->
+        <div class="bakery-card">
+          <div class="bakery-img">
+            <img src="generated_image_1784296323_0.png" alt="Oreos Chocolate Cake">
+          </div>
+          <div class="bakery-info">
+            <p class="bakery-tag">INDULGENCE</p>
+            <h3 class="bakery-name">Oreos Chocolate Cake</h3>
+            <p class="bakery-desc">Our signature dark chocolate cake elevated with Oreo crumble and cream. Dangerously good.</p>
+            <span class="coming-soon-tag">Available to Order</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE COCONUT PANTRY -->
+<section class="pantry-section" id="pantry">
+  <div class="container">
+    <p class="section-eyebrow">THE COCONUT PANTRY</p>
+    <h2 class="section-title">Pure. Unprocessed. Powerful.</h2>
+    <p class="section-subtitle">Pantry essentials sourced from the finest coconuts.</p>
+    <div class="divider"></div>
+    <p class="pantry-intro">
+      From our premium coconut range to ingredients for the health-conscious kitchen — these are products we are currently developing with the same Mohfood obsession for quality. Available soon.
+    </p>
+    <div class="pantry-grid">
+
+      <div class="pantry-card">
+        <div class="pantry-img">
+          <img src="generated_image_1784296341_0.png" alt="Desiccated Coconut">
+        </div>
+        <div class="pantry-info">
+          <p class="pantry-tag">PANTRY ESSENTIAL</p>
+          <h3 class="pantry-name">Desiccated Coconut</h3>
+          <p class="pantry-desc">Finely shredded, naturally dried. The baker's secret ingredient for texture and depth in every bake.</p>
+          <div class="pantry-badge-row">
+            <span class="pantry-pill">Natural</span>
+            <span class="pantry-pill">No Additives</span>
+            <span class="pantry-pill">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pantry-card">
+        <div class="pantry-img">
+          <img src="generated_image_1784296362_0.png" alt="Coconut Flour">
+        </div>
+        <div class="pantry-info">
+          <p class="pantry-tag">KETO FRIENDLY</p>
+          <h3 class="pantry-name">Coconut Flour</h3>
+          <p class="pantry-desc">High-fibre, low-carb and gluten-free. The go-to flour for keto lovers and health-conscious bakers in Lagos.</p>
+          <div class="pantry-badge-row">
+            <span class="pantry-pill">Keto</span>
+            <span class="pantry-pill">Gluten-Free</span>
+            <span class="pantry-pill">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pantry-card">
+        <div class="pantry-img">
+          <img src="generated_image_1784296380_0.png" alt="Coconut Oil">
+        </div>
+        <div class="pantry-info">
+          <p class="pantry-tag">PURE COLD-PRESSED</p>
+          <h3 class="pantry-name">Coconut Oil</h3>
+          <p class="pantry-desc">Cold-pressed, unrefined and full of natural goodness. Cook, bake or nourish your skin — one oil, infinite uses.</p>
+          <div class="pantry-badge-row">
+            <span class="pantry-pill">Cold-Pressed</span>
+            <span class="pantry-pill">Unrefined</span>
+            <span class="pantry-pill">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="pantry-note">"We are developing these products with the same care we put into every parfait. Notify me when ready →"</p>
+  </div>
+</section>
+
+<!-- EVERYDAY RANGE -->
+<section class="everyday-section" id="everyday">
+  <div class="container">
+    <div class="everyday-layout">
+      <div class="everyday-intro">
+        <p class="section-eyebrow">EVERYDAY RANGE</p>
+        <h2 class="section-title">Love Mohfood<br>Every Day</h2>
+        <div class="divider"></div>
+        <p>Our Everyday range brings the Mohfood quality into your daily routine — Greek yoghurts (sweetened, unsweetened, vanilla), classic parfaits and coconut oil, available at stockists across Lagos.</p>
+        <p>No frills, just the good stuff. Consistently fresh, consistently Mohfood.</p>
+        <div class="stockist-box">
+          <h4>Find Us Near You</h4>
+          <p>Available at select stockists across Lagos. Call us to find your nearest location or to become a stockist.</p>
+          <p style="margin-top: 12px;"><a href="tel:07010731559">📞 07010731559</a></p>
+        </div>
+        <a href="tel:07010731559" class="everyday-phone" style="margin-top: 24px;">
+          📞 Call to Order or Find a Stockist
+        </a>
+      </div>
+      <div class="everyday-products">
+        <div class="everyday-item">
+          <img src="generated_image_1784296399_0.png" alt="Sweetened Greek Yoghurt">
+          <p class="everyday-item-name">Greek Yoghurt — Sweetened</p>
+          <p class="everyday-item-sub">Classic &amp; creamy</p>
+        </div>
+        <div class="everyday-item">
+          <img src="generated_image_1784296422_0.png" alt="Unsweetened Greek Yoghurt">
+          <p class="everyday-item-name">Greek Yoghurt — Unsweetened</p>
+          <p class="everyday-item-sub">Pure &amp; natural</p>
+        </div>
+        <div class="everyday-item">
+          <img src="generated_image_1784296442_0.png" alt="Vanilla Greek Yoghurt">
+          <p class="everyday-item-name">Greek Yoghurt — Vanilla</p>
+          <p class="everyday-item-sub">Gently sweetened</p>
+        </div>
+        <div class="everyday-item">
+          <img src="generated_image_1784296198_0.png" alt="Classic Parfait">
+          <p class="everyday-item-name">Classic Parfait</p>
+          <p class="everyday-item-sub">Everyday indulgence</p>
+        </div>
+        <div class="everyday-item">
+          <img src="generated_image_1784296380_0.png" alt="Everyday Coconut Oil">
+          <p class="everyday-item-name">Coconut Oil</p>
+          <p class="everyday-item-sub">Pure &amp; unrefined</p>
+        </div>
+        <div class="everyday-item" style="background: var(--forest); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 160px;">
+          <p style="font-family:'Playfair Display',serif; font-size:15px; color:white; font-style:italic; text-align:center; padding: 20px;">Available at stockists across Lagos</p>
+          <a href="tel:07010731559" style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; color:#c8a96a; text-decoration:none; text-transform:uppercase;">Call 07010731559</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story-section" id="story">
+  <div class="container">
+    <div class="story-layout">
+      <div class="story-text">
+        <p class="section-eyebrow">OUR STORY</p>
+        <h2 class="section-title">Made in Lagos,<br>With Love &amp; Obsession</h2>
+        <div class="divider"></div>
+        <p>Mohfood Signature was born from a simple but uncompromising belief: that Lagos deserves food made with real ingredients, real care, and absolutely zero shortcuts.</p>
+        <p>Every parfait starts the same way — we source the best Greek yoghurt, the most vibrant real fruits, the crunchiest granola. Then we layer. And layer. Until it's exactly right.</p>
+        <p>We don't use preservatives because we believe food should taste like it was just made. Because it was. Every single day.</p>
+        <div class="story-values">
+          <div class="story-value">
+            <div class="story-value-icon">🍃</div>
+            <h5>No Preservatives</h5>
+            <p>Made fresh every morning</p>
+          </div>
+          <div class="story-value">
+            <div class="story-value-icon">🍓</div>
+            <h5>Real Ingredients</h5>
+            <p>No artificial flavours</p>
+          </div>
+          <div class="story-value">
+            <div class="story-value-icon">🏡</div>
+            <h5>Lagos Made</h5>
+            <p>Crafted with local pride</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-image">
+        <img src="generated_image_1784296219_0.png" alt="Mohfood Signature Story">
+        <div class="story-image-caption">"Every layer is a promise — of quality, care and indulgence."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER CTA -->
+<section class="order-cta" id="order">
+  <h2>Ready to Indulge?</h2>
+  <p>Order your Signature parfait today — delivered chilled, fresh to your door.</p>
+  <a href="tel:07010731559" class="btn-white">Order Now — 07010731559</a>
+  <div class="order-methods">
+    <span class="order-method">📞 Call to Order</span>
+    <span class="order-method">💬 WhatsApp Order</span>
+    <span class="order-method">🚚 Chilled Delivery Lagos</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>MOHFOOD <span>SIGNATURE</span></h3>
+        <p>Premium handcrafted parfaits, artisan bakes and pure pantry essentials. Made fresh daily in Lagos, with no preservatives. Ever.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">Signature Parfaits</a></li>
+          <li><a href="#bakery">Artisana Bakery</a></li>
+          <li><a href="#pantry">The Coconut Pantry</a></li>
+          <li><a href="#everyday">Everyday Range</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#">Our Values</a></li>
+          <li><a href="#">Stockists</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:07010731559">07010731559</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp Order</a></li>
+          <li><a href="#">Lagos, Nigeria</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Mohfood Signature. All rights reserved.</span>
+      <span>Made fresh daily in Lagos · No preservatives, ever.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
