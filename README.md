@@ -2,6 +2,7 @@
 
 > Dedicated, high-performance luxury Single Page Application (SPA) for the Artisana Bakery line by Mohfood, separated from the Greek yoghurt parfait catalog.
 
+[![Deployment](https://img.shields.io/badge/Vercel-Live%20App-000000?logo=vercel&logoColor=white)](https://artisana-bakery.vercel.app)
 [![Runtime](https://img.shields.io/badge/Runtime-Bun%20v1.3+-FBF0DF?logo=bun&logoColor=black)](https://bun.sh)
 [![Framework](https://img.shields.io/badge/Framework-Next.js%2015%20App%20Router-black?logo=next.js)](https://nextjs.org)
 [![Styling](https://img.shields.io/badge/CSS-Tailwind%20CSS%20v4-38BDF8?logo=tailwindcss)](https://tailwindcss.com)
@@ -98,7 +99,17 @@ bun run build
 
 ---
 
-## 7. Architecture & Lighthouse Defenses
+## 7. Deployment & CI/CD
+
+- **Production URL:** [https://artisana-bakery.vercel.app](https://artisana-bakery.vercel.app)
+- **GitHub Repositories:**
+  - [`th3mw/artisana-bakery`](https://github.com/th3mw/artisana-bakery) (Primary)
+  - [`nath-277/artisana-bakery`](https://github.com/nath-277/artisana-bakery) (Vercel Git Integration)
+- **Automated CI/CD:** Vercel is connected directly to the repository. Every `git push` to `main` automatically triggers an optimized Next.js build using Bun and deploys straight to production.
+
+---
+
+## 8. Architecture & Lighthouse Defenses
 
 - **Static Generation (SSG):** Pre-rendered static pages with 19.9 kB HTML payload and zero server-side cold start latency.
 - **Hydration Safety:** `TrayContext` hydration guard prevents SSR hydration mismatches by deferring `localStorage` sync until client mount.
