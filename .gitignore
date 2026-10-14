@@ -1,0 +1,25 @@
+# Node & Bun
+node_modules/
+.next/
+out/
+build/
+dist/
+bun.lockb
+bun.lock
+
+# Superpowers scratch
+.superpowers/
+
+# Environment files
+.env
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
