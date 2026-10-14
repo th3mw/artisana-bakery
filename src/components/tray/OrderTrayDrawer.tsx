@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Trash2, Plus, Minus, ShoppingBag, ArrowRight, MessageCircle, MapPin, Calendar, User, Phone, FileText } from 'lucide-react';
 import { useTray } from '@/context/TrayContext';
 import { formatNaira, generateWhatsAppUrl } from '@/utils/whatsapp';
@@ -22,6 +22,20 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
     deliveryDate: '',
     specialInstructions: '',
   });
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -176,7 +190,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
                       onChange={(e) =>
                         setDetails({ ...details, customerName: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-base sm:text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
                     />
                   </div>
 
@@ -193,7 +207,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
                       onChange={(e) =>
                         setDetails({ ...details, phoneNumber: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-base sm:text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
                     />
                   </div>
 
@@ -208,7 +222,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
                       onChange={(e) =>
                         setDetails({ ...details, deliveryArea: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-base sm:text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
                     >
                       <option value="Lagos Island (Lekki / Ikoyi / VI)">
                         Lagos Island (Lekki / Ikoyi / Victoria Island)
@@ -235,7 +249,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
                       onChange={(e) =>
                         setDetails({ ...details, deliveryAddress: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-base sm:text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
                     />
                   </div>
 
@@ -247,11 +261,12 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
                     </label>
                     <input
                       type="date"
+                      min={new Date().toISOString().split('T')[0]}
                       value={details.deliveryDate}
                       onChange={(e) =>
                         setDetails({ ...details, deliveryDate: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-base sm:text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
                     />
                   </div>
 
@@ -271,7 +286,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
                           specialInstructions: e.target.value,
                         })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-white border border-[#EDE0D4] text-base sm:text-xs text-[#2A1B14] focus:outline-none focus:border-[#9E1B32]"
                     />
                   </div>
                 </div>
@@ -282,7 +297,7 @@ export function OrderTrayDrawer({ isOpen, onClose }: OrderTrayDrawerProps) {
 
         {/* Fixed Checkout Footer */}
         {items.length > 0 && (
-          <div className="p-6 border-t border-[#EDE0D4] bg-[#F7EFE6] space-y-4">
+          <div className="p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] border-t border-[#EDE0D4] bg-[#F7EFE6] space-y-4">
             <div className="flex items-center justify-between">
               <div>
                 <span className="text-[11px] text-[#7E6D64] uppercase font-semibold block">

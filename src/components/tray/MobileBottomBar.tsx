@@ -17,7 +17,7 @@ export function MobileBottomBar({ onOpenTray }: MobileBottomBarProps) {
   return (
     <aside
       aria-label="Mobile Order Summary"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/95 backdrop-blur-md border-t border-[#EDE0D4] shadow-lg animate-in slide-in-from-bottom duration-300"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-white/95 backdrop-blur-md border-t border-[#EDE0D4] shadow-lg animate-in slide-in-from-bottom duration-300"
     >
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <div className="flex items-center gap-2.5">

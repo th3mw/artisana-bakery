@@ -70,7 +70,7 @@ export function ProductCard({ product, onQuickView }: ProductCardProps) {
           type="button"
           onClick={() => onQuickView(product)}
           aria-label={`View details for ${product.name}`}
-          className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-semibold uppercase tracking-wider backdrop-blur-[2px] z-20 cursor-pointer"
+          className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs font-semibold uppercase tracking-wider backdrop-blur-[2px] z-20 cursor-pointer"
         >
           <Eye className="w-4 h-4" />
           <span>Quick View</span>

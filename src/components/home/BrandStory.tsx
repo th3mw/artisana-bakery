@@ -90,7 +90,7 @@ export function BrandStory() {
                 </div>
 
                 <h3 className="font-serif text-2xl sm:text-3xl font-bold leading-snug">
-                  "Every loaf is a promise: real ingredients, extraordinary tenderness, zero compromises."
+                  &ldquo;Every loaf is a promise: real ingredients, extraordinary tenderness, zero compromises.&rdquo;
                 </h3>
 
                 <p className="text-xs text-[#D0C2B6] font-light leading-relaxed">

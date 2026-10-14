@@ -15,6 +15,20 @@ export function ProductQuickView({ product, onClose }: ProductQuickViewProps) {
   const { addItem } = useTray();
   const [added, setAdded] = React.useState(false);
 
+  React.useEffect(() => {
+    if (!product) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [product, onClose]);
+
   if (!product) return null;
 
   const handleAdd = () => {
@@ -29,6 +43,7 @@ export function ProductQuickView({ product, onClose }: ProductQuickViewProps) {
       aria-modal="true"
       aria-labelledby="quick-view-title"
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
+      onClick={onClose}
     >
       <div
         className="relative w-full max-w-2xl bg-[#FDF8F3] rounded-2xl shadow-2xl overflow-hidden border border-[#EDE0D4] max-h-[90vh] flex flex-col"

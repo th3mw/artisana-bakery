@@ -66,7 +66,7 @@ export function CollectionSwitcher({
             className="mt-4 text-center max-w-xl px-4 animate-in fade-in duration-300"
           >
             <p className="font-serif italic text-base sm:text-lg text-[#C88A3E]">
-              "{col.tagline}"
+              &ldquo;{col.tagline}&rdquo;
             </p>
             <p className="text-xs text-[#7E6D64] mt-1 font-light">
               {col.description}

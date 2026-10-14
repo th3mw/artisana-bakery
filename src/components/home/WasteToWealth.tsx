@@ -109,7 +109,7 @@ export function WasteToWealth({ onExplorePantry }: WasteToWealthProps) {
               </div>
 
               <blockquote className="font-serif italic text-base text-[#E8DDD0] border-l-2 border-[#C88A3E] pl-4 py-1 leading-relaxed">
-                "We don't believe in waste when working with nature's finest ingredients. What began as an operational byproduct is now Lagos's most honest keto flour and pantry line."
+                &ldquo;We don&apos;t believe in waste when working with nature&apos;s finest ingredients. What began as an operational byproduct is now Lagos&apos;s most honest keto flour and pantry line.&rdquo;
               </blockquote>
 
               <div className="space-y-3 pt-2 text-xs text-[#D0C2B6]">
